@@ -26,12 +26,12 @@ public class Main {
 			try (PreparedStatement ps = con.prepareStatement(sql)) {
 				try (ResultSet rs = ps.executeQuery()) {
 					while(rs.next()) {
-						final String countriesName = rs.getString(1);
+						final String countries = rs.getString(1);
 						final int id = rs.getInt(2);
-						final String regName = rs.getString(3);
-						final String contName = rs.getString(4);
+						final String regions = rs.getString(3);
+						final String continents = rs.getString(4);
 						
-						System.out.println(id + " - " + countriesName + " - " + regName + " - " + contName);
+						System.out.println(id + " - " + countries + " - " + regions + " - " + continents);
 					}
 				}
 			}
